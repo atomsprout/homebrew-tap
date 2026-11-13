@@ -1,6 +1,6 @@
 cask "locus" do
-  version "0.1.0,31"
-  sha256 "b2c6b42a09b6139cae0e45802170aa8d534f92aa0a910d09ab4f1c32efdf77a7"
+  version "0.1.0,33"
+  sha256 "7e0b3b5055ee1a1ddfd4b3d824562d1ae79a441c4d1b35e3dc3339700d4d47d7"
 
   url "https://github.com/atomsprout/locus-release/releases/download/v#{version.csv.first}-#{version.csv.second}/Locus-#{version.csv.first}-#{version.csv.second}.zip"
   name "Locus"

@@ -41,4 +41,4 @@ Usage, supported scope, known issues and feedback: [Locus release repository](ht
 
 ## Preview release policy
 
-The current `0.1.0,31` cask intentionally installs the public preview. Its exact version is declared in Homebrew's `github_prerelease_allowlist` audit metadata; the GitHub release remains a prerelease. Future versions require an explicit cask/checksum and policy update.
+The current `0.1.0,33` cask intentionally installs the public preview. Its exact version is declared in Homebrew's `github_prerelease_allowlist` audit metadata; the GitHub release remains a prerelease. Future versions require an explicit cask/checksum and policy update.

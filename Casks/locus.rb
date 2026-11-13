@@ -1,6 +1,6 @@
 cask "locus" do
-  version "0.1.0,30"
-  sha256 "33ab70e76d51d0f935071cc7666588ff9e6973864670b2370e029edcdc4fa41a"
+  version "0.1.0,31"
+  sha256 "b2c6b42a09b6139cae0e45802170aa8d534f92aa0a910d09ab4f1c32efdf77a7"
 
   url "https://github.com/atomsprout/locus-release/releases/download/v#{version.csv.first}-#{version.csv.second}/Locus-#{version.csv.first}-#{version.csv.second}.zip"
   name "Locus"
@@ -12,14 +12,14 @@ cask "locus" do
   end
 
   depends_on arch: :arm64
-  depends_on macos: :golden_gate
+  depends_on macos: :tahoe
 
   app "Locus.app"
 
   uninstall quit: "com.everettjf.locus"
 
   caveats <<~EOS
-    Public preview: Apple silicon and macOS 27 or later are required.
+    Public preview: Apple silicon and macOS 26 or later are required.
     Open Locus from /Applications, keep the default route Direct, and press Start.
     macOS will ask you to approve its network extension and proxy configuration.
     Installing this cask does not enable the network extension automatically.

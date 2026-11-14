@@ -12,7 +12,7 @@ brew install --cask atomsprout/tap/locus
 
 If Homebrew reports an untrusted cask after an update, run `brew trust --cask atomsprout/tap/locus`, then retry.
 
-Requires **Apple silicon / macOS 26 or later** and a current Homebrew that recognizes macOS26. Locus is a rule-based proxy and connection metadata inspector with local MCP tools for agents.
+Requires **Apple silicon / macOS 26 or later** and a current Homebrew that recognizes macOS26. Locus is a rule-based proxy and network workspace with scoped HTTP(S) evidence and 28 local MCP tools for agents. HTTPS inspection and Agent body reading require explicit separate approval.
 
 Downloads are signed and notarized app archives from [atomsprout/locus-release](https://github.com/atomsprout/locus-release/releases). The cask pins the exact archive SHA-256. The first release is a public preview, with physical Mac feedback still pending.
 
@@ -29,7 +29,7 @@ brew upgrade --cask atomsprout/tap/locus
 
 ## Uninstall
 
-First use **Locus → Settings → Remove network integration**, approve removal, and restart if macOS requests it. Then:
+If you trusted the Locus CA, first remove trust in **Requests → HTTPS certificate settings**. Then use **Locus → Settings → Remove network integration**, approve removal, and restart if macOS requests it. Then:
 
 ```sh
 brew uninstall --cask atomsprout/tap/locus
@@ -41,4 +41,4 @@ Usage, supported scope, known issues and feedback: [Locus release repository](ht
 
 ## Preview release policy
 
-The current `0.1.0,36` cask intentionally installs the public preview. Its exact version is declared in Homebrew's `github_prerelease_allowlist` audit metadata; the GitHub release remains a prerelease. Future versions require an explicit cask/checksum and policy update.
+The current `0.3.0,50` cask intentionally installs the public preview. Its exact version is declared in Homebrew's `github_prerelease_allowlist` audit metadata; the GitHub release remains a prerelease. Future versions require an explicit cask/checksum and policy update.

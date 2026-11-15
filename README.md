@@ -16,11 +16,11 @@ Requires **Apple silicon / macOS 26 or later** and a current Homebrew that recog
 
 Downloads are signed and notarized app archives from [atomsprout/locus-release](https://github.com/atomsprout/locus-release/releases). The cask pins the exact archive SHA-256. The first release is a public preview, with physical Mac feedback still pending.
 
-Open `/Applications/Locus.app`, keep default routing **Direct**, and click **Start**. Complete the normal macOS network-extension and proxy-configuration approvals. Homebrew installation itself does not enable network integration. After reboot, open Locus and Start manually.
+Open `/Applications/Locus.app`, choose your mode and nodes in Overview, and click **Connect**. Complete the normal macOS network-extension and proxy-configuration approvals. Homebrew installation itself does not enable network integration. After reboot, open Locus and Connect manually.
 
 ## Upgrade
 
-Press **Stop** in Locus before running:
+Press **Disconnect** in Locus before running:
 
 ```sh
 brew update
@@ -41,4 +41,4 @@ Usage, supported scope, known issues and feedback: [Locus release repository](ht
 
 ## Preview release policy
 
-The current `0.3.0,50` cask intentionally installs the public preview. Its exact version is declared in Homebrew's `github_prerelease_allowlist` audit metadata; the GitHub release remains a prerelease. Future versions require an explicit cask/checksum and policy update.
+The current `0.4.0,59` cask intentionally installs the public preview. Its exact version is declared in Homebrew's `github_prerelease_allowlist` audit metadata; the GitHub release remains a prerelease. Future versions require an explicit cask/checksum and policy update.

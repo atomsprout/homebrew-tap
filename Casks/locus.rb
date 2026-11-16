@@ -1,10 +1,10 @@
 cask "locus" do
-  version "0.5.0,63"
-  sha256 "5f764b3c90b388d8b4fd9084f818ee6daf764522e05db1d5d1736ba5207c439e"
+  version "0.6.0,68"
+  sha256 "86632ca036558b4a5deabcc220b9e20b76959fa0b62df87d1eda866ce544d02f"
 
   url "https://github.com/atomsprout/locus-release/releases/download/v#{version.csv.first}-#{version.csv.second}/Locus-#{version.csv.first}-#{version.csv.second}.zip"
   name "Locus"
-  desc "Rule-based proxy and HTTP evidence workspace for users and agents"
+  desc "Agent-ready HTTP debugger and rule-based proxy"
   homepage "https://github.com/atomsprout/locus-release"
 
   livecheck do

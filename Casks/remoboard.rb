@@ -11,7 +11,7 @@ cask "remoboard" do
     skip "Preview releases are promoted manually"
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "Remoboard.app"
 

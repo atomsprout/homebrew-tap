@@ -39,6 +39,19 @@ The cask removes the app bundle; it does not manually delete system-extension di
 
 Usage, supported scope, known issues and feedback: [Locus release repository](https://github.com/atomsprout/locus-release).
 
+## Install Remoboard preview
+
+```sh
+brew tap atomsprout/tap
+brew install --cask atomsprout/tap/remoboard
+```
+
+Requires **macOS 11 or later**, Intel or Apple silicon. Remoboard for Mac connects to the Remoboard keyboard on your phone over Bluetooth or Wi-Fi, so you can type on the phone from the computer. Bluetooth mode needs the next Remoboard release on the phone, which is not in the stores yet.
+
+The download is a signed and notarized disk image from [atomsprout/remoboard-release](https://github.com/atomsprout/remoboard-release/releases). Upgrade with `brew upgrade --cask atomsprout/tap/remoboard`, remove with `brew uninstall --cask atomsprout/tap/remoboard`.
+
 ## Preview release policy
 
 The current `0.6.0,68` cask intentionally installs the public preview. Its exact version is declared in Homebrew's `github_prerelease_allowlist` audit metadata; the GitHub release remains a prerelease. Future versions require an explicit cask/checksum and policy update.
+
+The `remoboard` cask (`0.1.0`) follows the same policy.

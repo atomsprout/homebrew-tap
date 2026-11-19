@@ -2,7 +2,7 @@ class AnalyzeAnything < Formula
   desc "Analyze any app package, installer or file into an evidence-backed report"
   homepage "https://github.com/atomsprout/analyze-anything"
   url "https://github.com/atomsprout/analyze-anything/releases/download/v0.1.0/analyze-anything-0.1.0-aarch64-apple-darwin.tar.gz"
-  sha256 "4868ca088e2a5e954db0a3ee58c1264a1bac446bbee97391f50b3c24a91a4521"
+  sha256 "34347e74eb1e0803475e312b4c70896d513d0f7a38d1fb12bb553dc9d3dfded5"
   license "Apache-2.0"
 
   livecheck do
@@ -26,7 +26,7 @@ class AnalyzeAnything < Formula
       The report is written to <name>.report in the current folder. `aaaa` is the same command.
 
       An AI reading of the report is optional and off until you set it up:
-        analyze-anything ai claude        # or: codex, api, command
+        analyze-anything ai claude        # or: api, codex, ollama
         analyze-anything <file> --ai
 
       The desktop app is a separate cask:

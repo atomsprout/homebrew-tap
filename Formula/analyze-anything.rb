@@ -2,7 +2,7 @@ class AnalyzeAnything < Formula
   desc "Analyze any app package, installer or file into an evidence-backed report"
   homepage "https://github.com/atomsprout/analyze-anything"
   url "https://github.com/atomsprout/analyze-anything/releases/download/v0.1.0/analyze-anything-0.1.0-aarch64-apple-darwin.tar.gz"
-  sha256 "34347e74eb1e0803475e312b4c70896d513d0f7a38d1fb12bb553dc9d3dfded5"
+  sha256 "97a08c9e23db36b71bbbf049bf3f777b90a4d4adb564f8e3a963aeeefdcc5437"
   license "Apache-2.0"
 
   livecheck do

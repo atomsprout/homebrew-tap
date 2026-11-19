@@ -1,6 +1,6 @@
 cask "analyze-anything-desktop" do
-  version "0.1.0"
-  sha256 "a1c9b10423d608fd3a28bd902153b1b7132ff31b6b033b952dba499d7c0caee1"
+  version "0.1.1"
+  sha256 "45e25eaceb292ada1ae0dbef38bc61a5319c9a7d99581ea94e1aeb0e25b0a391"
 
   url "https://github.com/atomsprout/analyze-anything-release/releases/download/v#{version}/Analyze-Anything-#{version}-arm64.dmg"
   name "Analyze Anything"

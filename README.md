@@ -62,16 +62,18 @@ Analyzes any app package, installer, archive, folder or file (IPA, APK, .app, DM
 
 ```sh
 brew tap atomsprout/tap
-brew install atomsprout/tap/analyze-anything                  # the command: aa
+brew install atomsprout/tap/analyze-anything                  # the command: analyze-anything
 brew install --cask atomsprout/tap/analyze-anything-desktop   # the desktop app
 ```
 
 Requires **Apple silicon**; the desktop app needs macOS 12 or later. Both downloads are signed with a Developer ID certificate and notarized, from [atomsprout/analyze-anything-release](https://github.com/atomsprout/analyze-anything-release/releases); the formula and the cask pin the exact SHA-256. The packages have only been run on macOS 27 so far.
 
 ```sh
-aa analyze <file or folder> -o out
-aa diff old/report.json new/report.json
+analyze-anything analyze <file or folder> -o out
+analyze-anything diff old/report.json new/report.json
 ```
+
+The program calls itself `aa`; Homebrew installs it as `analyze-anything` because macOS already has a `/usr/bin/aa` (Apple Archive).
 
 Upgrade with `brew upgrade atomsprout/tap/analyze-anything` and `brew upgrade --cask atomsprout/tap/analyze-anything-desktop`; the desktop app does not update itself. The desktop app keeps past reports (never the analyzed files) in `~/Library/Application Support/com.atomsprout.analyze-anything`; `brew uninstall --zap --cask atomsprout/tap/analyze-anything-desktop` removes them with the app.
 

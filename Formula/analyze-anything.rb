@@ -13,14 +13,19 @@ class AnalyzeAnything < Formula
   depends_on :macos
 
   def install
-    bin.install "aa"
+    # The program is called `aa` upstream, but macOS has its own /usr/bin/aa (Apple Archive).
+    # Installing under that name would either be hidden by it or hide it from scripts.
+    bin.install "aa" => "analyze-anything"
     doc.install "README.md"
   end
 
   def caveats
     <<~EOS
-      The command is `aa`. Start with:
-        aa analyze <file or folder> -o out
+      The command is `analyze-anything`. Start with:
+        analyze-anything analyze <file or folder> -o out
+
+      Elsewhere the program is called `aa`; macOS already has a command of that
+      name (Apple Archive), so Homebrew installs it under its full name.
 
       The desktop app is a separate cask:
         brew install --cask atomsprout/tap/analyze-anything-desktop
@@ -30,11 +35,11 @@ class AnalyzeAnything < Formula
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/aa --version")
+    assert_match version.to_s, shell_output("#{bin}/analyze-anything --version")
     # Analyzes built-in samples and compares with known results.
-    assert_match "selftest passed", shell_output("#{bin}/aa selftest")
+    assert_match "selftest passed", shell_output("#{bin}/analyze-anything selftest")
     (testpath/"hello.txt").write("see https://example.com/docs\n")
-    system bin/"aa", "analyze", testpath/"hello.txt", "-o", testpath/"out", "--format", "json"
+    system bin/"analyze-anything", "analyze", testpath/"hello.txt", "-o", testpath/"out", "--format", "json"
     assert_match "example.com", (testpath/"out/report.json").read
   end
 end

@@ -1,11 +1,11 @@
 cask "analyze-anything-desktop" do
-  version "0.2.0"
-  sha256 "6e567ed1908f6be0cd138df07d60ea3d15d4fe0873d1c646b4eb5f01ce8f2156"
+  version "0.1.0"
+  sha256 "39bbb149f437a8fdcb101e54f995ad1398194341a7ff519797483fa4736ba853"
 
-  url "https://github.com/atomsprout/analyze-anything-release/releases/download/v#{version}/Analyze-Anything-#{version}-arm64.dmg"
+  url "https://github.com/atomsprout/analyze-anything/releases/download/v#{version}/Analyze-Anything-#{version}-arm64.dmg"
   name "Analyze Anything"
   desc "Analyze any app package, installer or file and read the report"
-  homepage "https://github.com/atomsprout/analyze-anything-release"
+  homepage "https://github.com/atomsprout/analyze-anything"
 
   livecheck do
     skip "Releases are promoted manually"
@@ -36,6 +36,6 @@ cask "analyze-anything-desktop" do
     The command-line tool is a separate formula:
       brew install atomsprout/tap/analyze-anything
 
-    Documentation and feedback: https://github.com/atomsprout/analyze-anything-release
+    Documentation and feedback: https://github.com/atomsprout/analyze-anything
   EOS
 end

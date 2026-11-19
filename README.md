@@ -1,6 +1,6 @@
 # AtomSprout Homebrew Tap
 
-Homebrew casks for AtomSprout applications. This tap contains distribution definitions, not application source code.
+Homebrew casks and formulae for AtomSprout applications. This tap contains distribution definitions, not application source code.
 
 ## Install Locus public preview
 
@@ -55,3 +55,24 @@ The download is a signed and notarized disk image from [atomsprout/remoboard-rel
 The current `0.6.0,68` cask intentionally installs the public preview. Its exact version is declared in Homebrew's `github_prerelease_allowlist` audit metadata; the GitHub release remains a prerelease. Future versions require an explicit cask/checksum and policy update.
 
 The `remoboard` cask (`0.1.0`) follows the same policy.
+
+## Install Analyze Anything
+
+Analyzes any app package, installer, archive, folder or file (IPA, APK, .app, DMG, pkg, Windows installers and more) into a report in which every finding carries its evidence. Static and offline: the input is only read, never run. The command-line tool and the desktop app are installed separately and neither needs the other.
+
+```sh
+brew tap atomsprout/tap
+brew install atomsprout/tap/analyze-anything                  # the command: aa
+brew install --cask atomsprout/tap/analyze-anything-desktop   # the desktop app
+```
+
+Requires **Apple silicon**; the desktop app needs macOS 12 or later. Both downloads are signed with a Developer ID certificate and notarized, from [atomsprout/analyze-anything-release](https://github.com/atomsprout/analyze-anything-release/releases); the formula and the cask pin the exact SHA-256. The packages have only been run on macOS 27 so far.
+
+```sh
+aa analyze <file or folder> -o out
+aa diff old/report.json new/report.json
+```
+
+Upgrade with `brew upgrade atomsprout/tap/analyze-anything` and `brew upgrade --cask atomsprout/tap/analyze-anything-desktop`; the desktop app does not update itself. The desktop app keeps past reports (never the analyzed files) in `~/Library/Application Support/com.atomsprout.analyze-anything`; `brew uninstall --zap --cask atomsprout/tap/analyze-anything-desktop` removes them with the app.
+
+Usage, known limits and feedback: [Analyze Anything release repository](https://github.com/atomsprout/analyze-anything-release).

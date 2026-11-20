@@ -2,7 +2,7 @@
 
 Homebrew casks and formulae for AtomSprout applications. This tap contains distribution definitions, not application source code.
 
-## Install Locus public preview
+## Install Locus
 
 ```sh
 brew update
@@ -14,7 +14,7 @@ If Homebrew reports an untrusted cask after an update, run `brew trust --cask at
 
 Requires **Apple silicon / macOS 26 or later** and a current Homebrew that recognizes macOS26. Locus is a rule-based proxy and network workspace with scoped HTTP(S) evidence, session-scoped header rewriting and 36 local MCP tools for agents. HTTPS inspection and Agent body reading require explicit separate approval.
 
-Downloads are signed and notarized app archives from [atomsprout/locus-release](https://github.com/atomsprout/locus-release/releases). The cask pins the exact archive SHA-256. The first release is a public preview, with physical Mac feedback still pending.
+Downloads are signed and notarized app archives from [atomsprout/locus-release](https://github.com/atomsprout/locus-release/releases). The cask pins the exact archive SHA-256. 1.0 is the first stable release. Its final archive was accepted on a macOS 27 virtual machine; physical Mac feedback is still pending.
 
 Open `/Applications/Locus.app`, choose your mode and nodes in Overview, and click **Connect**. Complete the normal macOS network-extension and proxy-configuration approvals. Homebrew installation itself does not enable network integration. After reboot, open Locus and Connect manually.
 
@@ -52,7 +52,7 @@ The download is a signed and notarized disk image from [atomsprout/remoboard-rel
 
 ## Preview release policy
 
-The current `0.6.0,68` cask intentionally installs the public preview. Its exact version is declared in Homebrew's `github_prerelease_allowlist` audit metadata; the GitHub release remains a prerelease. Future versions require an explicit cask/checksum and policy update.
+The Locus `1.0.0,70` cask installs its first stable release; that GitHub release is not a prerelease and has no allowlist entry. A preview cask must have its exact version declared in Homebrew's `github_prerelease_allowlist` audit metadata. Every version requires an explicit cask and checksum update.
 
 The `remoboard` cask (`0.1.0`) follows the same policy.
 

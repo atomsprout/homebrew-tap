@@ -1,6 +1,6 @@
 cask "locus" do
-  version "0.6.0,68"
-  sha256 "86632ca036558b4a5deabcc220b9e20b76959fa0b62df87d1eda866ce544d02f"
+  version "1.0.0,70"
+  sha256 "2b744b3a7651facac6e56454cbb4e5a241f3dc37f583c427b6c195ac434caa8b"
 
   url "https://github.com/atomsprout/locus-release/releases/download/v#{version.csv.first}-#{version.csv.second}/Locus-#{version.csv.first}-#{version.csv.second}.zip"
   name "Locus"
@@ -8,7 +8,7 @@ cask "locus" do
   homepage "https://github.com/atomsprout/locus-release"
 
   livecheck do
-    skip "Public preview releases are promoted manually"
+    skip "Releases are promoted manually after runtime acceptance"
   end
 
   depends_on arch: :arm64
@@ -19,12 +19,13 @@ cask "locus" do
   uninstall quit: "com.everettjf.locus"
 
   caveats <<~EOS
-    Public preview: Apple silicon and macOS 26 or later are required.
+    Apple silicon and macOS 26 or later are required.
     Open Locus from /Applications, choose your routing mode and nodes in Overview, then press Connect.
-    macOS will ask you to approve its network extension and proxy configuration.
+    macOS will ask you to approve its network extension (administrator password) and proxy configuration.
     Installing this cask does not enable the network extension automatically.
 
-    HTTPS inspection requires separate app/host approval and explicit local CA trust.
+    HTTPS inspection requires separate app/host approval and explicit trust in the local CA,
+    system-wide or by one client (for example curl --cacert).
     Agent body access is separately approved and expires.
 
     Press Disconnect before upgrading. Before uninstalling, if you trusted the Locus CA,

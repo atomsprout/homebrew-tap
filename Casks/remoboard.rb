@@ -8,7 +8,8 @@ cask "remoboard" do
   homepage "https://github.com/atomsprout/remoboard-release"
 
   livecheck do
-    skip "Preview releases are promoted manually"
+    url :url
+    strategy :github_latest
   end
 
   depends_on :macos
@@ -18,8 +19,8 @@ cask "remoboard" do
   uninstall quit: "com.atomsprout.remoboard.desktop"
 
   caveats <<~EOS
-    Preview: Bluetooth mode needs the next Remoboard release on the phone, which is
-    not in the App Store or Google Play yet. With today's phone versions use Wi-Fi.
+    Bluetooth mode needs Remoboard 8.3 or later on the phone (part of Remoboard Pro).
+    With 8.2 on the phone, use Wi-Fi.
 
     Open Remoboard from /Applications and allow Bluetooth when macOS asks.
     Documentation and feedback: https://github.com/atomsprout/remoboard-release
